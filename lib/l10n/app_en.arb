@@ -1,0 +1,6 @@
+{
+  "search": "Search...",
+  "@Search": {
+    "description": "The search name of application"
+  }
+}

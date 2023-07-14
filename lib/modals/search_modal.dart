@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SearchModal extends StatefulWidget {
   const SearchModal({super.key});
@@ -66,9 +67,10 @@ class SearchModalState extends State<SearchModal> {
                         child: TextField(
                           controller: _searchController,
                           style: const TextStyle(color: Colors.black),
-                          decoration: const InputDecoration(
-                            hintText: 'Поиск...',
-                            hintStyle: TextStyle(color: Color(0xFFD1D5DB)),
+                          decoration: InputDecoration(
+                            hintText: AppLocalizations.of(context).search,
+                            hintStyle:
+                                const TextStyle(color: Color(0xFFD1D5DB)),
                             border: InputBorder.none,
                           ),
                         ),

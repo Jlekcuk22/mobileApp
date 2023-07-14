@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ultraapp/utils/app_config.dart';
 
 class Header extends StatelessWidget {
   const Header({Key? key}) : super(key: key);
@@ -7,7 +8,7 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color(0xFF013252),
+      color: AppConfig.primaryColor,
       padding: const EdgeInsets.symmetric(horizontal: 16),
       height: 60,
       child: Row(

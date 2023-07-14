@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../modals/search_modal.dart';
+import '../utils/app_config.dart';
 
 class BottomNavigation extends StatelessWidget {
   const BottomNavigation({super.key});
@@ -9,17 +10,17 @@ class BottomNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color(0xFF013252),
+      color: AppConfig.primaryColor,
       child: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        backgroundColor: const Color(0xFF013252),
+        backgroundColor: AppConfig.primaryColor,
         items: [
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
               'assets/icons/home.svg',
               width: 28,
               height: 28,
-              color: const Color(0xFFB2B2D8),
+              color: AppConfig.navbarIconsColor,
             ),
             label: '',
           ),
@@ -28,7 +29,7 @@ class BottomNavigation extends StatelessWidget {
               'assets/icons/offers.svg',
               width: 48,
               height: 48,
-              color: const Color(0xFFB2B2D8),
+              color: AppConfig.navbarIconsColor,
             ),
             label: '',
           ),
@@ -37,7 +38,7 @@ class BottomNavigation extends StatelessWidget {
               'assets/icons/catalog.svg',
               width: 28,
               height: 28,
-              color: const Color(0xFFB2B2D8),
+              color: AppConfig.navbarIconsColor,
             ),
             label: '',
           ),
@@ -46,7 +47,7 @@ class BottomNavigation extends StatelessWidget {
               'assets/icons/cart.svg',
               width: 28,
               height: 28,
-              color: const Color(0xFFB2B2D8),
+              color: AppConfig.navbarIconsColor,
             ),
             label: '',
           ),
@@ -55,7 +56,7 @@ class BottomNavigation extends StatelessWidget {
               'assets/icons/search.svg',
               width: 28,
               height: 28,
-              color: const Color(0xFFB2B2D8),
+              color: AppConfig.navbarIconsColor,
             ),
             label: '',
           ),

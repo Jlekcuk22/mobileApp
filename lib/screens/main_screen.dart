@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ultraapp/widgets/header.dart';
 import 'package:ultraapp/widgets/home_page.dart';
 
+import '../utils/app_config.dart';
+
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
 
@@ -16,8 +18,7 @@ class MainScreen extends StatelessWidget {
             right: 0,
             height: 60,
             child: Container(
-              color:
-                  const Color(0xFF013252), // Set the background color to blue
+              color: AppConfig.primaryColor, // Set the background color to blue
             ),
           ),
           const SafeArea(
