@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class AppConfig {
@@ -11,6 +9,10 @@ class AppConfig {
   static const Color primaryColor = Color(0xFF013252);
   static const Color secondaryColor = Color(0xFFD92121);
   static const Color navbarIconsColor = Color(0xFFB2B2D8);
+  static const Color gray = Color(0xFFE5E7EB);
+  static const Color gray50 = Color(0xFFF3F4F6);
+  static const Color gray100 = Color(0xFF9CA3AF);
+  static const Color gray800 = Color(0xFF1F2937);
 
   static MaterialColor getPrimarySwatch() {
     return MaterialColor(primaryColor.value, {

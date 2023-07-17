@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ultraapp/widgets/header.dart';
-import 'package:ultraapp/widgets/home_page.dart';
+import 'package:ultraapp/widgets/home/offer_products_block.dart';
+import 'package:ultraapp/widgets/main_slider.dart';
 
 import '../utils/app_config.dart';
 
@@ -16,21 +17,30 @@ class MainScreen extends StatelessWidget {
             top: 0,
             left: 0,
             right: 0,
-            height: 60,
+            height: MediaQuery.of(context).padding.top + 60,
             child: Container(
-              color: AppConfig.primaryColor, // Set the background color to blue
+              color: AppConfig.primaryColor,
             ),
           ),
-          const SafeArea(
-            child: Column(
+          SafeArea(
+              child: Container(
+            color: AppConfig.gray50,
+            child: const Column(
               children: [
                 Header(),
                 Expanded(
-                  child: MyHomePage(title: 'Flutter Demo Home Page'),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        MainSlider(),
+                        OfferProductsBlock(),
+                      ],
+                    ),
+                  ),
                 ),
               ],
             ),
-          ),
+          ))
         ],
       ),
     );

@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:ultraapp/ios/ios_specific.dart';
 import 'package:ultraapp/utils/app_config.dart';
 import 'package:ultraapp/screens/main_screen.dart';
