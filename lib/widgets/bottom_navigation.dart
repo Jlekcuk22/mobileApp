@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ultraapp/screens/category_modal_screen.dart';
 
-import '../modals/search_modal.dart';
 import '../utils/app_config.dart';
 
 class BottomNavigation extends StatelessWidget {
@@ -53,7 +53,7 @@ class BottomNavigation extends StatelessWidget {
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
-              'assets/icons/search.svg',
+              'assets/icons/phone.svg',
               width: 28,
               height: 28,
               color: AppConfig.navbarIconsColor,
@@ -62,14 +62,16 @@ class BottomNavigation extends StatelessWidget {
           ),
         ],
         onTap: (index) {
-          if (index == 4) {
-            showModalBottomSheet<void>(
+          if (index == 2) {
+            showDialog<void>(
+              barrierColor: Colors.transparent,
+              useSafeArea: true,
               context: context,
-              isScrollControlled: true,
               builder: (BuildContext context) {
                 return const FractionallySizedBox(
-                  heightFactor: 0.8,
-                  child: SearchModal(),
+                  alignment: AlignmentDirectional.center,
+                  heightFactor: 0.76,
+                  child: CategoryModalWidget(),
                 );
               },
             );

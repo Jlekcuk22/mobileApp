@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ultraapp/screens/product_detail_screen.dart';
 import 'package:ultraapp/utils/app_config.dart';
 
 class OfferProductCard extends StatelessWidget {
@@ -7,7 +8,22 @@ class OfferProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return GestureDetector(
+      onTap: () {
+        showDialog<void>(
+          barrierColor: Colors.transparent,
+          useSafeArea: true,
+          context: context,
+          builder: (BuildContext context) {
+            return const FractionallySizedBox(
+              alignment: AlignmentDirectional.center,
+              heightFactor: 0.8,
+              child: ProductDetailScreen(),
+            );
+          },
+        );
+      },
+      child: Card(
       elevation: 0,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
       child: Column(
@@ -29,6 +45,7 @@ class OfferProductCard extends StatelessWidget {
                 ), // Replace with your favorite icon
               ),
             ],
+        
           ),
           const SizedBox(height: 8),
           const Padding(
@@ -90,6 +107,7 @@ class OfferProductCard extends StatelessWidget {
               )),
           const SizedBox(height: 8),
         ],
+      ),
       ),
     );
   }

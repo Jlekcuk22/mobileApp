@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:ultraapp/widgets/header.dart';
 import 'package:ultraapp/widgets/home/offer_products_block.dart';
 import 'package:ultraapp/widgets/main_slider.dart';
-
 import '../utils/app_config.dart';
 
 class MainScreen extends StatelessWidget {

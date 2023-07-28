@@ -2,5 +2,17 @@
   "search": "Cautare...",
   "@Search": {
     "description": "Cautare in applicatie"
+  },
+  "phones": "Smartphone",
+   "@Phones": {
+    "description": "Smartphones"
+  },
+  "phones_and_gadgets": "Smartphone-uri și gadgeturi",
+   "@Phones_and_gadgets": {
+    "description": "Smartphone-uri și gadgeturi"
+  },
+   "color": "Culoare:",
+  "@Color": {
+    "description": "Numele culoarei"
   }
 }

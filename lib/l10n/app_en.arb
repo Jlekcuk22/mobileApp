@@ -2,5 +2,17 @@
   "search": "Search...",
   "@Search": {
     "description": "The search name of application"
+  },
+  "phones": "Smartphone",
+   "@Phones": {
+    "description": "Smartphones"
+  },
+  "phones_and_gadgets": "Smartphones and Gadgets",
+   "@Phones_and_gadgets": {
+    "description": "Smartphones and Gadgets"
+  },
+   "color": "Color:",
+  "@Color": {
+    "description": "Name of color"
   }
 }

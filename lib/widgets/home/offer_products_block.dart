@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:ultraapp/utils/app_config.dart';
-
 import 'offer_product_card.dart';
 
 class OfferProductsBlock extends StatelessWidget {
@@ -12,7 +11,7 @@ class OfferProductsBlock extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Padding(
-          padding: EdgeInsets.only(top: 10), // Add vertical padding of 20
+          padding: EdgeInsets.only(top: 10),
           child: Text(
             'Товар на акции',
             style: TextStyle(
