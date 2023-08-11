@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ultraapp/components/promos/custom_flip_clock.dart';
+import 'package:ultraapp/components/promos/gift_card.dart';
 import 'package:ultraapp/components/step_icon/step_icon.dart';
 import 'package:ultraapp/utils/app_config.dart';
 import 'package:ultraapp/widgets/header.dart';
@@ -157,14 +158,57 @@ class PromoDetails extends StatelessWidget {
                                       ],
                                     ),
                                   ),
-                                )
+                                ),
+                                const SizedBox(
+                                  width: 60,
+                                ),
+                                
                               ],
                             ),
+                            
                           ],
                         ),
                       )),
+                      
                     ],
                   ),
+                  Container(
+                      color: AppConfig.gray100,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 13, vertical: 60),
+                        child: Row(children: [
+                          Center(
+                            child: SizedBox(
+                              width: 368,
+                              height: 123,
+                              child: Stack(
+                                children: [
+                                  Positioned.fill(
+                                    top: -45,
+                                    left: -5,
+                                    child: SvgPicture.asset(
+                                      'assets/icons/model_bg.svg',
+                                      width: 368,
+                                      height: 123,
+                                    ),
+                                  ),
+                                  const Text(
+                                    'Выберите модель',
+                                    style: TextStyle(
+                                      fontSize: 30,
+                                      fontWeight: FontWeight.w700,
+                                      color: AppConfig.gray900,
+                                    ),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ]),
+                      )),
+                  const PromoGift()
                 ],
               ),
             ),
