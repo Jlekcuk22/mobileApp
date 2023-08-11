@@ -14,5 +14,41 @@
    "color": "Color:",
   "@Color": {
     "description": "Name of color"
+  },
+   "ram": "RAM:",
+  "@Ram": {
+    "description": "Random access memory"
+  },
+   "total": "Total",
+  "@Total": {
+    "description": "Total price"
+  },
+   "specifications": "Specifications",
+  "@Specifications": {
+    "description": "Product specifications"
+  },
+   "main_characteristics": "Main\ncharacteristics",
+  "@Main characteristics": {
+    "description": "Main\ncharacteristics"
+  },
+   "days": "days",
+  "@Days": {
+    "description": "Days"
+  },
+   "hours": "hours",
+  "@Hours": {
+    "description": "Hours"
+  },
+   "minutes": "minutes",
+  "@Minutes": {
+    "description": "Minutes"
+  },
+   "seconds": "seconds",
+  "@Seconds": {
+    "description": "Seconds"
+  },
+   "reviews": "reviews",
+  "@Reviews": {
+    "description": "Reviews"
   }
 }

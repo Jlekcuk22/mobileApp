@@ -14,5 +14,41 @@
    "color": "Цвет:",
   "@Color": {
     "description": "Название цвета"
+  },
+   "ram": "Оперативная память:",
+  "@Ram": {
+    "description": "Оперативная память"
+  },
+   "total": "Итого",
+  "@Total": {
+    "description": "Итоговая цена"
+  },
+   "specifications": "Характеристики",
+  "@Specifications": {
+    "description": "Характеристики товара"
+  },
+   "main_characteristics": "Основные\nхарактеристики",
+  "@Main characteristics": {
+    "description": "Основные\nхарактеристики"
+  },
+   "reviews": "Отзывы",
+  "@Reviews": {
+    "description": "Отзывы"
+  },
+   "days": "дней",
+  "@Days": {
+    "description": "Дней"
+  },
+   "hours": "часов",
+  "@Hours": {
+    "description": "Часов"
+  },
+   "minutes": "минут",
+  "@Minutes": {
+    "description": "Минут"
+  },
+   "seconds": "секунд",
+  "@Seconds": {
+    "description": "Секунд"
   }
 }

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ultraapp/screens/sub_category_screen.dart';
-
 import '../utils/app_config.dart';
 
 class CategoryModalWidget extends StatelessWidget {

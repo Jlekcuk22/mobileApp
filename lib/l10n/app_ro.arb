@@ -14,5 +14,41 @@
    "color": "Culoare:",
   "@Color": {
     "description": "Numele culoarei"
+  },
+   "ram": "RAM:",
+  "@Ram": {
+    "description": "Random access memory"
+  },
+   "total": "Total",
+  "@Total": {
+    "description": "Pretul total"
+  },
+   "specifications": "Caracteristici",
+  "@Specifications": {
+    "description": "Caracteristicile produsului"
+  },
+   "main_characteristics": "Caracteristici\nprincipale",
+  "@Main characteristics": {
+    "description": "Caracteristici\nprincipales"
+  },
+   "reviews": "Recenzii",
+  "@Reviews": {
+    "description": "Recenzii"
+  },
+   "days": "zile",
+  "@Days": {
+    "description": "Zile"
+  },
+   "hours": "ora",
+  "@Hours": {
+    "description": "Ora"
+  },
+   "minutes": "minute",
+  "@Minutes": {
+    "description": "Minute"
+  },
+   "seconds": "secunde",
+  "@Seconds": {
+    "description": "Secunde"
   }
 }

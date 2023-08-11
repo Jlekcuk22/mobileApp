@@ -1,10 +1,12 @@
+import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dots_indicator/dots_indicator.dart';
-import 'package:flutter/material.dart';
 import 'package:ultraapp/utils/app_config.dart';
 
+import '../components/promos/promo_category.dart';
+
 class MainSlider extends StatefulWidget {
-  const MainSlider({super.key});
+  const MainSlider({Key? key}) : super(key: key);
 
   @override
   State<MainSlider> createState() => _MainSliderState();
@@ -34,7 +36,6 @@ class _MainSliderState extends State<MainSlider> {
                 autoPlay: true,
                 autoPlayInterval: const Duration(seconds: 5),
                 onPageChanged: (index, _) {
-                  // Update the active slide index when the page changes
                   setState(() {
                     activeIndex = index;
                   });
@@ -44,15 +45,24 @@ class _MainSliderState extends State<MainSlider> {
               items: imageUrls.map((imageUrl) {
                 return Builder(
                   builder: (BuildContext context) {
-                    return SizedBox(
-                      width: MediaQuery.of(context).size.width,
-                      child: Image.asset(
-                        imageUrl,
-                        width: double
-                            .infinity, // Set width to fill the entire slider width
-                        height: double
-                            .infinity, // Set height to fill the specified slider height
-                        fit: BoxFit.fill,
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                PromoDetails(imageUrl: imageUrl),
+                          ),
+                        );
+                      },
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width,
+                        child: Image.asset(
+                          imageUrl,
+                          width: double.infinity,
+                          height: double.infinity,
+                          fit: BoxFit.fill,
+                        ),
                       ),
                     );
                   },
@@ -69,14 +79,14 @@ class _MainSliderState extends State<MainSlider> {
             decorator: DotsDecorator(
               activeColor: AppConfig.primaryColor,
               color: AppConfig.gray,
-              activeSize: const Size(26, 3), // Set the size for active dots
+              activeSize: const Size(26, 3),
               activeShape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5),
               ),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5),
               ),
-              size: const Size(16, 3), // Set the size for inactive dots
+              size: const Size(16, 3),
             ),
           ),
         ],
