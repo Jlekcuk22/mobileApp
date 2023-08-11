@@ -175,8 +175,7 @@ class PromoDetails extends StatelessWidget {
                   Container(
                       color: AppConfig.gray100,
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 13, vertical: 60),
+                        padding: const EdgeInsets.fromLTRB(13, 60, 13, 0),
                         child: Row(children: [
                           Center(
                             child: SizedBox(
@@ -208,7 +207,8 @@ class PromoDetails extends StatelessWidget {
                           ),
                         ]),
                       )),
-                  const PromoGift()
+                  const PromoGift(),
+                  const SizedBox(height: 60)
                 ],
               ),
             ),
