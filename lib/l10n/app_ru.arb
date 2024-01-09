@@ -50,5 +50,37 @@
    "seconds": "секунд",
   "@Seconds": {
     "description": "Секунд"
+  },
+   "promos": "Акции",
+  "@Promos": {
+    "description": "Акции"
+  },
+   "showFrom": "Показано с",
+  "@ShowFrom": {
+    "description": "Показано с"
+  },
+   "fromTo": " {from} до {to} ",
+  "@FromTo": {
+    "description": "С до"
+  },
+   "outOf": "из {outOf} ",
+  "@OutOf": {
+    "description": "из"
+  },
+   "results": "результатов",
+  "@Results": {
+    "description": "Результатов"
+  },
+   "feedbacks": "отзывов",
+  "@Feedbacks": {
+    "description": "Отзывов"
+  },
+   "to": "до",
+  "@To": {
+    "description": "До"
+  },
+   "gift": "Подарок",
+  "@Gift": {
+    "description": "Подарок"
   }
 }

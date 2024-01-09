@@ -7,12 +7,16 @@ class PromoCountdownClock extends StatefulWidget {
   final DateTime countdown;
   final bool hideDays;
   final bool darkMode;
+  final bool showStarsCenter;
+  final bool showRotatedStarsCenter;
 
   const PromoCountdownClock({
     Key? key,
     required this.countdown,
     this.hideDays = false,
     this.darkMode = false,
+    this.showStarsCenter = false,
+    this.showRotatedStarsCenter = false,
   }) : super(key: key);
 
   @override
@@ -56,6 +60,7 @@ class _PromoCountdownClockState extends State<PromoCountdownClock> {
     return Center(
       child: Column(
         children: [
+          if (widget.showStarsCenter)
           Center(
             child: SvgPicture.asset('assets/icons/stars.svg'),
           ),
@@ -83,6 +88,7 @@ class _PromoCountdownClockState extends State<PromoCountdownClock> {
             ],
           ),
           const SizedBox(height: 20.0),
+          if (widget.showRotatedStarsCenter)
           Center(
             child: Transform.rotate(
               angle: 3.14159,

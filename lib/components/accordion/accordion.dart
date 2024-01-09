@@ -4,25 +4,23 @@ import 'package:ultraapp/utils/app_config.dart';
 
 class CustomExpansionTile extends StatefulWidget {
   final String title;
-  final String? subtitle;
   final List<Widget> children;
-  final Color background;
+  final Color? background;
   final TextStyle? titleStyle;
   final bool initiallyExpanded;
   final Widget? icon;
-  final double borderRadius;
+  final double? borderRadius;
   final EdgeInsetsGeometry? tilePadding;
 
   const CustomExpansionTile({
     Key? key,
     required this.title,
     required this.children,
-    required this.background,
-    this.subtitle,
+    this.background,
     this.titleStyle,
     this.initiallyExpanded = false,
     this.icon,
-    this.borderRadius = 14.0,
+    this.borderRadius,
     this.tilePadding,
   }) : super(key: key);
 
@@ -58,10 +56,13 @@ class _CustomExpansionTileState extends State<CustomExpansionTile>
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 200),
+      curve: Curves.easeInOut,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(widget.borderRadius),
         color: widget.background,
+        borderRadius:
+            BorderRadius.circular(widget.borderRadius ?? 0), // Добавили это
       ),
       child: ExpansionTile(
         title: Text(

@@ -50,5 +50,37 @@
    "reviews": "reviews",
   "@Reviews": {
     "description": "Reviews"
+  },
+   "promos": "Promotions",
+  "@Promos": {
+    "description": "Promotions"
+  },
+   "showFrom": "Shown from",
+  "@ShowFrom": {
+    "description": "Shown from"
+  },
+   "fromTo": " {from} to {to}",
+  "@FromTo": {
+    "description": "From to"
+  },
+   "outOf": "of {outOf} ",
+  "@OutOf": {
+    "description": "of"
+  },
+   "results": "results",
+  "@Results": {
+    "description": "Results"
+  },
+   "feedbacks": "reviews",
+  "@Feedbacks": {
+    "description": "Feedbacks"
+  },
+   "to": "to",
+  "@To": {
+    "description": "To percents"
+  },
+   "gift": "Gift",
+  "@Gift": {
+    "description": "Gift"
   }
 }

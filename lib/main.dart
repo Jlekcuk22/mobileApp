@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:ultraapp/ios/ios_specific.dart';
 import 'package:ultraapp/utils/app_config.dart';
 import 'package:ultraapp/screens/main_screen.dart';
-import 'package:ultraapp/widgets/bottom_navigation.dart';
+// import 'package:ultraapp/widgets/bottom_navigation.dart';
 
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -48,7 +48,7 @@ class Ultra extends StatelessWidget {
       ),
       home: const Scaffold(
         body: MainScreen(),
-        bottomNavigationBar: BottomNavigation(),
+        // bottomNavigationBar: BottomNavigation(),
       ),
     );
   }

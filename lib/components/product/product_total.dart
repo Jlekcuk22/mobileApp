@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ultraapp/modals/modal_credt_processing.dart';
 import 'package:ultraapp/utils/app_config.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -16,7 +17,7 @@ class TotalContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 19),
+      padding: const EdgeInsets.fromLTRB(19, 14, 19, 20),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(8),
@@ -32,7 +33,7 @@ class TotalContainer extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                AppLocalizations.of(context).total,
+                AppLocalizations.of(context)!.total,
                 style: const TextStyle(
                   fontSize: 34,
                   fontWeight: FontWeight.w700,
@@ -44,16 +45,18 @@ class TotalContainer extends StatelessWidget {
                   Text(
                     '30 498',
                     style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w400,
+                      color: AppConfig.primaryColor,
+                      fontSize: 34,
+                      fontWeight: FontWeight.w700,
                     ),
                   ),
                   SizedBox(width: 6),
                   Text(
                     'лей',
                     style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w700,
+                      color: AppConfig.gray400,
+                      fontSize: 24,
+                      fontWeight: FontWeight.w400,
                     ),
                   ),
                 ],
@@ -105,6 +108,7 @@ class TotalContainer extends StatelessWidget {
                   'assets/icons/cart_add.svg',
                   width: 20,
                   height: 20,
+                  // ignore: deprecated_member_use
                   color: Colors.white,
                 ),
                 label: const Text(
@@ -117,33 +121,42 @@ class TotalContainer extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 10),
-              ElevatedButton.icon(
-                onPressed: () {},
+              ElevatedButton(
+                onPressed: () {
+                  showModalBottomSheet(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return const ModalCreditProcessing();
+                    },
+                  );
+                },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(6),
-                    side: const BorderSide(
-                      color: AppConfig.primaryColor,
-                      width: 1.0,
-                    ),
-                  ),
-                ),
-                icon: SvgPicture.asset(
-                  'assets/icons/credit.svg',
-                  width: 20,
-                  height: 20,
-                  color: AppConfig.primaryColor,
-                ),
-                label: const Text(
-                  'Оформить кредит',
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w600,
+                  backgroundColor: Colors.transparent,
+                  padding: const EdgeInsets.symmetric(vertical: 11),
+                  side: const BorderSide(
                     color: AppConfig.primaryColor,
+                    width: 1,
                   ),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8)),
+                  elevation: 0,
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SvgPicture.asset('assets/icons/credit.svg'),
+                    const SizedBox(width: 8),
+                    const Text(
+                      'Оформить кредит',
+                      style: TextStyle(
+                        color: AppConfig.primaryColor,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],

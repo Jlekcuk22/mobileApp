@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ultraapp/components/pagination/pagination.dart';
 import 'package:ultraapp/components/promos/custom_flip_clock.dart';
-import 'package:ultraapp/components/promos/gift_card.dart';
-import 'package:ultraapp/components/step_icon/step_icon.dart';
-import 'package:ultraapp/utils/app_config.dart';
-import 'package:ultraapp/widgets/header.dart';
+import 'package:ultraapp/widgets/bottom_navigation.dart';
+import 'package:ultraapp/widgets/header_widger.dart';
+import 'package:ultraapp/widgets/home/offer_product_card.dart';
+import 'category_card.dart';
 
-class PromoDetails extends StatelessWidget {
-  PromoDetails({Key? key, required String imageUrl}) : super(key: key);
+class PromoCategories extends StatelessWidget {
+  PromoCategories({Key? key, required String imageUrl}) : super(key: key);
   final DateTime countdownDate = DateTime.now().add(const Duration(days: 5));
 
   @override
@@ -20,201 +20,144 @@ class PromoDetails extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  SizedBox(
-                    height: 231,
-                    width: double.infinity,
-                    child: Image.asset(
-                      'assets/images/promo.png',
-                      fit: BoxFit.cover,
-                    ),
+                SizedBox(
+                  height: 231,
+                  width: double.infinity,
+                  child: Image.asset(
+                    'assets/images/promo.png',
+                    fit: BoxFit.cover,
                   ),
-                  const SizedBox(
-                    height: 32,
-                  ),
-                  const SizedBox(
-                      height: 16), // Промежуток между текстом и таймером
-                  PromoCountdownClock(
-                    countdown: countdownDate,
-                    hideDays: false,
-                    darkMode: false,
-                  ),
-                  Row(
+                ),
+                const SizedBox(
+                  height: 32,
+                ),
+                PromoCountdownClock(
+                  countdown: countdownDate,
+                  hideDays: false,
+                  darkMode: false,
+                ),
+                const SizedBox(height: 42),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 13),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.max,
                     children: [
-                      const SizedBox(height: 16),
-                      Expanded(
-                          child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 17, vertical: 35),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text(
-                              'Сертификат в подарок при покупке робота-пылесоса Xiaomi',
-                              style: TextStyle(
-                                color: AppConfig.gray800,
-                                fontSize: 20,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                            const SizedBox(height: 30),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Container(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Column(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Center(
-                                        child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: [
-                                              const StepIcon(
-                                                  iconSvgPath:
-                                                      'assets/icons/search.svg',
-                                                  stepNumber: '1'),
-                                              const SizedBox(height: 30),
-                                              Positioned(
-                                                bottom: -10,
-                                                left: 25,
-                                                child: SvgPicture.asset(
-                                                  'assets/icons/red_arrow.svg',
-                                                  width: 13,
-                                                  height: 13,
-                                                ),
-                                              ),
-                                              const SizedBox(height: 30),
-                                              const StepIcon(
-                                                  iconSvgPath:
-                                                      'assets/icons/search.svg',
-                                                  stepNumber: '2'),
-                                              const SizedBox(height: 30),
-                                              Positioned(
-                                                bottom: -10,
-                                                left: 25,
-                                                child: SvgPicture.asset(
-                                                  'assets/icons/red_arrow.svg',
-                                                  width: 13,
-                                                  height: 13,
-                                                ),
-                                              ),
-                                              const SizedBox(height: 30),
-                                              const StepIcon(
-                                                  iconSvgPath:
-                                                      'assets/icons/search.svg',
-                                                  stepNumber: '3'),
-                                            ]),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                const SizedBox(
-                                  width: 23,
-                                ),
-                                Expanded(
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        vertical: 20, horizontal: 13),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceAround,
-                                      children: [
-                                        Text(
-                                          'Выберите продукт, который участвует в акции.',
-                                          style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w400,
-                                            color: Colors.grey[600],
-                                          ),
-                                          textAlign: TextAlign.left,
-                                        ),
-                                        const SizedBox(height: 62),
-                                        Text(
-                                          'Добавьте товар в корзину и подарочный сертификат будет добавлен автоматически в корзину.',
-                                          style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w400,
-                                            color: Colors.grey[600],
-                                          ),
-                                          textAlign: TextAlign.left,
-                                        ),
-                                        const SizedBox(height: 62),
-                                        Text(
-                                          'Оформите свой заказ со скидкой!',
-                                          style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w400,
-                                            color: Colors.grey[600],
-                                          ),
-                                          textAlign: TextAlign.left,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(
-                                  width: 60,
-                                ),
-                                
-                              ],
-                            ),
-                            
-                          ],
-                        ),
-                      )),
-                      
-                    ],
-                  ),
-                  Container(
-                      color: AppConfig.gray100,
-                      child: Padding(
-                        padding: const EdgeInsets.fromLTRB(13, 60, 13, 0),
-                        child: Row(children: [
-                          Center(
-                            child: SizedBox(
-                              width: 368,
-                              height: 123,
-                              child: Stack(
-                                children: [
-                                  Positioned.fill(
-                                    top: -45,
-                                    left: -5,
-                                    child: SvgPicture.asset(
-                                      'assets/icons/model_bg.svg',
-                                      width: 368,
-                                      height: 123,
-                                    ),
-                                  ),
-                                  const Text(
-                                    'Выберите модель',
-                                    style: TextStyle(
-                                      fontSize: 30,
-                                      fontWeight: FontWeight.w700,
-                                      color: AppConfig.gray900,
-                                    ),
-                                    textAlign: TextAlign.left,
-                                  ),
-                                ],
-                              ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          CategoryCard(
+                            title: "Мелкая ",
+                            backgroundColor: Colors.white,
+                          ),
+                          SizedBox(width: 6),
+                          CategoryCard(
+                            title: "Мелкая техника для кухни",
+                            backgroundColor: Colors.white,
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 16),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          CategoryCard(
+                            title: "Мелкая ",
+                            backgroundColor: Colors.white,
+                          ),
+                          SizedBox(width: 6),
+                          CategoryCard(
+                            title: "Мелкая техника для кухни",
+                            backgroundColor: Colors.white,
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 16),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          CategoryCard(
+                            title: "Мелкая ",
+                            backgroundColor: Colors.white,
+                          ),
+                          SizedBox(width: 6),
+                          CategoryCard(
+                            title: "Мелкая техника для кухни",
+                            backgroundColor: Colors.white,
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 16),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          CategoryCard(
+                            title: "Мелкая ",
+                            backgroundColor: Colors.white,
+                          ),
+                          SizedBox(width: 6),
+                          CategoryCard(
+                            title: "Мелкая техника для кухни",
+                            backgroundColor: Colors.white,
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 30),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 8),
+                              child: OfferProductCard(),
                             ),
                           ),
-                        ]),
-                      )),
-                  const PromoGift(),
-                  const SizedBox(height: 60)
-                ],
-              ),
+                          Expanded(
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 8),
+                              child: OfferProductCard(),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 8),
+                              child: OfferProductCard(),
+                            ),
+                          ),
+                          Expanded(
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 8),
+                              child: OfferProductCard(),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 46),
+                      Pagination(
+                        totalPages: 5,
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 52),
+              ]),
             ),
           ),
+          
         ],
       ),
+      bottomNavigationBar: const BottomNavigation(),
     );
   }
 }

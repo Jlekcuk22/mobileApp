@@ -50,5 +50,37 @@
    "seconds": "secunde",
   "@Seconds": {
     "description": "Secunde"
+  },
+   "promos": "Promoții",
+  "@Promos": {
+    "description": "Promoții"
+  },
+   "showFrom": "Arată din",
+  "@ShowFrom": {
+    "description": "Arată din"
+  },
+   "fromTo": " {from} la {to}",
+  "@FromTo": {
+    "description": "De la până la"
+  },
+   "outOf": "din {outOf} ",
+  "@OutOf": {
+    "description": "din"
+  },
+   "results": "rezultate",
+  "@Results": {
+    "description": "Rezultate"
+  },
+   "feedbacks": "comentarii",
+  "@Feedbacks": {
+    "description": "Comentarii"
+  },
+   "to": "înainte",
+  "@To": {
+    "description": "Înainte"
+  },
+   "gift": "Prezent",
+  "@Gift": {
+    "description": "Prezent"
   }
 }

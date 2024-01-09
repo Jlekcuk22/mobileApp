@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dots_indicator/dots_indicator.dart';
+import 'package:ultraapp/components/promos/promo_category.dart';
 import 'package:ultraapp/utils/app_config.dart';
-
-import '../components/promos/promo_category.dart';
+// import '../components/promos/promo_flip.dart';
 
 class MainSlider extends StatefulWidget {
   const MainSlider({Key? key}) : super(key: key);
@@ -51,7 +51,9 @@ class _MainSliderState extends State<MainSlider> {
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                PromoDetails(imageUrl: imageUrl),
+                                PromoCategories(
+                              imageUrl: imageUrl,
+                            ),
                           ),
                         );
                       },
@@ -78,7 +80,7 @@ class _MainSliderState extends State<MainSlider> {
             position: activeIndex,
             decorator: DotsDecorator(
               activeColor: AppConfig.primaryColor,
-              color: AppConfig.gray,
+              color: AppConfig.gray200,
               activeSize: const Size(26, 3),
               activeShape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5),

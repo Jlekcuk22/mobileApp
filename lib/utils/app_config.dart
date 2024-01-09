@@ -9,16 +9,21 @@ class AppConfig {
   static const Color primaryColor = Color(0xFF013252);
   static const Color secondaryColor = Color(0xFFD92121);
   static const Color navbarIconsColor = Color(0xFFB2B2D8);
-  static const Color gray = Color(0xFFE5E7EB);
-  static const Color gray50 = Color(0xFFF3F4F6);
+  static const Color gray50 = Color(0xFFF9FAFB);
   static const Color gray100 = Color(0xFFF3F4F6);
   static const Color gray200 = Color(0xFFE5E7EB);
+  static const Color gray300 = Color(0xFFD1D5DB);
   static const Color gray400 = Color(0xFF9CA3AF);
   static const Color gray500 = Color(0xFF6B7280);
   static const Color gray600 = Color(0xFF4B5563);
   static const Color gray700 = Color(0xFF374151);
   static const Color gray800 = Color(0xFF1F2937);
   static const Color gray900 = Color(0xFF111827);
+  static const Color jade500 = Color(0xFF43A194);
+  static const Color lightblue500 = Color(0xFF7CB2D3);
+  static const Color sapphireBlue500 = Color(0xFF135B7E);
+  static const Color darkBlue800 = Color(0xFF0C4A72);
+
 
 
   static MaterialColor getPrimarySwatch() {

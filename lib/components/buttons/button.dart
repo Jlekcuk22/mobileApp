@@ -28,6 +28,9 @@ class CustomButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         backgroundColor: color,
         padding: padding,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(8),
+        ),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
@@ -40,6 +43,7 @@ class CustomButton extends StatelessWidget {
                 svgIconPath!,
                 height: 20, // Задайте желаемую высоту иконки
                 width: 20, // Задайте желаемую ширину иконки
+                // ignore: deprecated_member_use
                 color: Colors.white, // Замените на желаемый цвет иконки
               ),
             ),
